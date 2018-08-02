@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+  		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  		<!-- Importar nuestro ABI en el proyecto -->
+
+      <script src="./../Plataforma Tokens/App/node_modules/@waves/waves-api/dist/waves-api.min.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      
+
+      <script src="./dist/waves-signature-generator.js"></script>
+
+      <script>
+        const Waves = WavesAPI.create(WavesAPI.MAINNET_CONFIG);
+        
+        console.log(Waves);
+
+      </script>
+
+  		<title> Plataforma Tokens </title>
+
+	</head>
+
+	<body style="background-color: white; text-align:center">      
+
+      <nav class="nav justify-content-center bg-dark">
+          <a class="nav-link text-white" href="index.html">Index</a>
+          <a class="nav-link text-white" href="ganoTokens.html">Gano</a>
+          <a class="nav-link text-white" href="gastoTokens.html">Canjeables</a>
+          <a class="nav-link text-white" href="intercambio.html">Intercambio</a>
+
+          <a class="nav-link text-white right"> TOKENS </a>
+      </nav>
+
+
+
+
+        <!--  - - - - - - - - CONTAINER TODOS CANJEABLES - - - - - - - - - - - - - -   -->
+        <div class="container-fluid">
+
+
+        <!--  - - - - - - - - EXPERIENCIAS - - - - - - - - - - - - - -   --> 
+        <div class="bg-secondary rounded text-white">
+          <hr>
+          <h2>  Experiencias   </h1>
+          <hr>
+        </div>
+
+
+
+
+        <!-- EXPERIENCIA 1  --->
+        <div class="row feature">
+          <div class="col-md-4">
+            <img class="featurette-image img-fluid mx-auto" src="./images/silverstone.jpg" alt="Image">
+          </div>
+          <div class="col-md-8">
+            <h2 class="featurette-heading"> Vive las motos en Silverstone </h2>
+            <p class="lead"> Te llevamos de viaje a ver el GP de Gran Bretaña. Disfruta de uno de los circuitos más prestigiosos de Europa en el que tendrá lugar el Gran Premio GoPro de Gran Bretaña del 24 al 26 de agosto. </p>
+            
+            <p>  Participa en la puja para poder llevarte uno de estos premios: 2 billetes de avión ida y vuelta a Londres
+                 1 habitación doble en régimen de alojamiento y desayuno
+                 2 pases paddock con acceso al circuito viernes, sábado y domingo
+                 Conoce a Valentino Rossi y Maverick Viñales
+                 Y muchas sorpresas más...
+            </p>
+
+            <p><a class="btn btn-secondary bg-danger" href="#" role="button"> 1000 TEFTOK </a></p>
+          </div>
+          
+        </div>
+
+
+        <!-- EXPERIENCIA 2  --->
+        <div class="row feature border-top">
+          <div class="col-md-4">
+            <img class="featurette-image img-fluid mx-auto" src="./images/teatro.jpg" alt="Image">
+          </div>
+          <div class="col-md-8">
+            <h2 class="featurette-heading"> Nueva visita teatralizada al Palacio de Linares </h2>
+            <p class="lead"> Diversión y cultura garantizadas</p>
+            
+            <p>  Viaja al siglo XIX de una forma divertida y conoce la Casa de América.
+                  Hemos organizado una visita exclusiva solo para clientes Movistar al Palacio de Linares, sede actual de la Casa de América, el sábado 8 de septiembre a las 21:00 horas.
+                  Personajes de la época te revelarán secretos y misterios... ¡Fantasma incluido!
+                  No te piedas la oportunidad de disfrutar a lo grande. Participa en la puja antes del 31 de agosto a las 10:00 horas 
+            </p>
+
+            <p><a class="btn btn-secondary bg-danger" href="#" role="button"> 1000 TEFTOK </a></p>
+          </div>
+          
+        </div>
+
+
+
+        <!--  - - - - - - - - PRODUCTOS - - - - - - - - - - - - - -   -->
+        <div class="bg-secondary rounded text-white">
+          <hr>
+          <h2>  Productos   </h1>
+          <hr>
+        </div>
+
+
+        <!--  PRODUCTO 1 --->
+        <div class="row feature border-bottom">
+          <div class="col-md-4">
+            <img class="featurette-image img-fluid mx-auto" src="./images/maillot.jpg" alt="Image">
+          </div>
+          <div class="col-md-8">
+            <h2 class="featurette-heading"> Vístete como un campeón </h2>
+            <p class="lead"> Presume en tu bicicleta con los Maillots de la Vuelta España. Equípate con el maillot de la Vuelta España y siéntete único en tu bicicleta. 
+             </p>
+            
+            <p>  Participa en la puja para conseguir una de estas recompensas: Maillot rojo, que identifica al líder de la clasificiación general individual. 
+            Maillot verde, como identificación del líder de la clasificación por puntos. 
+            Maillot de puntos azules, que distingue al líder de la clasificación de la montaña.
+            Maillot blanco identifica al líder de la clasificación combinada.
+            </p>
+
+            <p><a class="btn btn-secondary bg-danger" href="#" role="button"> 1000 TEFTOK </a></p>
+          </div>
+        </div>
+
+        <!--  PRODUCTO 2 --->
+        <div class="row feature">
+          <div class="col-md-4">
+            <img class="featurette-image img-fluid mx-auto" src="./images/bici.jpg" alt="Image">
+          </div>
+          <div class="col-md-8">
+            <h2 class="featurette-heading"> Llévate una bici oficial </h2>
+            <p class="lead"> El Movistar Team encara dos retos: el Tour de Francia 2018, encabezado por el tridente formado por Alejandro Valverde, Nairo Quintana y Mikel Landa, y el Giro Rosa 2018.  
+             </p>
+            
+            <p>  ¿Quieres animarles y ganar una bicicleta oficial del Movistar Team? Si eres cliente Movistar y fan de la escuadra telefónica puede ser tuya.
+            </p>
+
+            <p><a class="btn btn-secondary bg-danger" href="#" role="button"> 1000 TEFTOK </a></p>
+          </div>
+        </div>
+
+
+      </div>
+      <!--     FIN CONTAINER CANJEABLES    -->
+
+
+		  <!-- Se ponen aqui los js y asi reduce el tiempo de carga del HTML -->
+  		<script>
+
+  		</script>
+  		<!-- Incluir jquery y bootstrap -->
+  		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  
+	</body>
+</html>

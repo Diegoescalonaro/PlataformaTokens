@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+  		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  		<!-- Importar nuestro ABI en el proyecto -->
+
+      <script src="./node_modules/@waves/waves-api/dist/waves-api.min.js"></script>
+
+      <!--<script src="./node_modules/@waves/waves-api/dist/waves-api.js"></script>-->
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      
+      <script> 
+        var WavesAPI2 = require("@waves/waves-api@1.2.0")
+      </script> 
+      
+      <script src="./dist/waves-signature-generator.js"></script>
+
+      <script>
+        const Waves = WavesAPI.create(WavesAPI.MAINNET_CONFIG);
+        
+        console.log(Waves);
+
+      </script>
+
+  		<title> Plataforma Tokens </title>
+
+	</head>
+
+	<body style="background-color: white; text-align:center">
+
+      <nav class="nav justify-content-center bg-dark">
+          <a class="nav-link text-white" href="index.html">Index</a>
+          <a class="nav-link text-white" href="ganoTokens.html">Gano</a>
+          <a class="nav-link text-white" href="gastoTokens.html">Canjeables</a>
+          <a class="nav-link text-white" href="intercambio.html">Intercambio</a>
+          <a class="nav-link text-align-right text-white"> TOKENS </a>
+      </nav>
+
+
+
+    <!--  - - - - - - - - CONTAINER PRINCIPAL - - - - - - - - - - - - - -   -->
+    <div class="container-fluid">
+<br>
+      
+            <div class="bg-secundary rounded">
+          <hr>
+          <h1>  Pagina principal - Login   </h1>
+          <hr>
+        </div>
+      <div class="bg-light rounded border"> 
+          <h1>  Pagina principal - Login   </h1>
+      </div>
+
+
+      Introduce tu seed: <input id="seed"></input>
+
+
+      <button onclick="login()"> Acceder </button>
+
+
+      <br><br>
+
+      Informacion de cuenta 
+      <div>
+        <p id="info"> </p>
+        <p id="transacciones"> </p>
+      </div>
+
+      <hr>
+
+      <button onclick="envio()"> PAGAR </button>
+
+      <form action="./../Scriptswaves/envioTokens.py"> 
+
+        <input type=text name="opcion"> <br> </input>
+        <input type=submit value="disparador">  </input>
+
+      </form>
+
+    <!--  - - - - - - - - FIN CONTAINER PRINCIPAL - - - - - - - - - - - - - -   -->
+    </div class="container-fluid">
+
+
+
+
+		  <!-- Se ponen aqui los js y asi reduce el tiempo de carga del HTML -->
+  		<script>
+
+        var account = null;
+
+        function login(){
+
+          account = Waves.Seed.fromExistingPhrase(document.getElementById("seed").value);
+          console.log(account);
+
+          var info = document.getElementById("info");
+          var transacciones = document.getElementById("transacciones");
+          info.innerHTML = account.address +"<br>";
+          transacciones.innerHTML = "";
+          
+          Waves.API.Node.addresses.balance(account.address)
+            .then((PromiseValue) => {
+            console.log(PromiseValue.balance);
+            info.innerHTML += "<br><b> Waves: </b>"+PromiseValue.balance+"<br>";
+          });
+
+         Waves.API.Node.assets.balance(account.address,"AFUG6HXViGfAnobd41H1sAeASUEmjF7dHsgt5K1XFcfM").then((value) => {
+            console.log(value);
+            info.innerHTML += "<br><b> TEFTOK: </b>"+value.balance/1000+"<br>";
+          });
+
+
+          Waves.API.Node.transactions.getList(account.address,100).then((txs) => {
+            console.log(txs);
+            transacciones.innerHTML += "<br>TRANSACCIONES <br>";
+            for(i=0; i<9; i++){
+              transacciones.innerHTML += ""+txs[i].id+"<br>";
+            }
+          });
+        
+        }
+
+
+        var transferData={};
+
+        function envio(){
+
+
+        	/* const newConfig = {
+
+            // The byte allowing to distinguish networks (mainnet, testnet, devnet, etc)
+            networkByte: Waves.constants.MAINNET_BYTE,
+
+            // Node and Matcher addresses, no comments here
+            nodeAddress: 'http://138.197.155.74:6869/',
+            matcherAddress: 'https://nodes.wavesnodes.com/matcher',
+
+            // If a seed phrase length falls below that value an error will be thrown
+            minimumSeedLength: 50
+
+
+}; */
+
+		//Waves.config.set(newConfig);
+		console.log(Waves.config.get());
+
+          var timestamp1 = Date.now();
+
+            transferData = {
+            // An arbitrary address; mine, in this example
+            recipient: '3P6onwAhnS1e63sFjN2PCKuRsxdHJuF6Qna',
+            
+            // ID of a token, or WAVES
+            assetId: 'AFUG6HXViGfAnobd41H1sAeASUEmjF7dHsgt5K1XFcfM', //TEFTOK
+            // The real amount is the given number divided by 10^(precision of the token)
+            amount: 1000,
+            // The same rules for these two fields
+            feeAssetId: 'WAVES',
+            fee: 100000,
+            // 140 bytes of data (it's allowed to use Uint8Array here)
+            attachment: '',
+            version:1,
+            timestamp: timestamp1
+          }; 
+/*
+          getSignature();
+
+          transferData = {
+            // An arbitrary address; mine, in this example
+            recipient: '3P6onwAhnS1e63sFjN2PCKuRsxdHJuF6Qna',
+            senderPublicKey: "UiJxp3iR8AcCYVxaijFQbbGL2Hp4MSBPge6emBfqCEs",
+            // ID of a token, or WAVES
+            assetId: 'AFUG6HXViGfAnobd41H1sAeASUEmjF7dHsgt5K1XFcfM', //TEFTOK
+            // The real amount is the given number divided by 10^(precision of the token)
+            amount: 1000,
+            // The same rules for these two fields
+            feeAssetId: "",
+            fee: 100000,
+            // 140 bytes of data (it's allowed to use Uint8Array here)
+            attachment: 'Probando',
+            timestamp: timestamp1,
+            signature: signature
+
+          };
+
+          /*transferData = { assetId: "AFUG6HXViGfAnobd41H1sAeASUEmjF7dHsgt5K1XFcfM", feeAssetId: "", senderPublicKey: "UiJxp3iR8AcCYVxaijFQbbGL2Hp4MSBPge6emBfqCEs", recipient: "3P6onwAhnS1e63sFjN2PCKuRsxdHJuF6Qna", amount: 1000, fee: 100000, timestamp: 1532419918476, attachment: "ETSLMqFmwRg", signature: "2E54gAosSAM2eRmjvfErXspHk6SLfY4CxbsHE97AyeU7WbFmoQ9hxboCZXVLobbuedhaYsPJxxZcCrtrt6QidSHE"} */
+
+          console.log(transferData);
+
+          /*fetch("https://nodes.wavesnodes.com/assets/broadcast/transfer",
+              {
+              headers:{
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+                    },
+              method: "POST",
+              body: transferData
+              })
+              .then((response) => {
+                  console.log(response);
+                })
+              .catch((error) => {
+                  console.log(error);
+                });
+              
+
+            var http = new XMLHttpRequest();
+            var url = "https://nodes.wavesnodes.com/transactions/broadcast";
+            http.open("POST",url,true);
+            http.setRequestHeader("Content-Type", "application/json");
+            
+
+            http.onreadystatechange = function() {
+              if(http.readyState == 4 && http.status == 200) { 
+              //aqui obtienes la respuesta de tu peticion
+            alert(http.responseText);
+            }
+              }
+            http.send(transferData);
+		*/
+
+          Waves.API.Node.transactions.broadcast('transfer', transferData, account.keyPair).then((responseData) => {
+            console.log(responseData);
+          });
+            
+        }
+
+
+
+        var ret="";
+
+        function JSONToArray(json){ 
+              var str = JSON.stringify(json, null, 0);
+              ret = new Uint8Array(str.length);
+              for (var i = 0; i < str.length; i++) {
+                  ret[i] = str.charCodeAt(i);
+              }
+              return ret;
+          }
+
+
+        var signature = "";
+        function getSignature(){
+
+          JSONToArray(transferData);
+          signature = wavesSignatureGenerator.utils.crypto.buildTransactionSignature(ret, account.keyPair.privateKey);
+          console.log(signature);
+        }
+
+        //https://nodes.wavesnodes.com
+
+  		</script>
+  		<!-- Incluir jquery y bootstrap -->
+  		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  
+	</body>
+</html>
