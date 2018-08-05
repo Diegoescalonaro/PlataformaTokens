@@ -10,7 +10,8 @@
 
       <script src="./../Plataforma Tokens/App/node_modules/@waves/waves-api/dist/waves-api.min.js"></script>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-      
+      <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Bevan|Spectral|Francois+One|Righteou" rel="stylesheet">  
 
       <script src="./dist/waves-signature-generator.js"></script>
 
@@ -25,16 +26,24 @@
 
 	</head>
 
-	<body style="background-color: white; text-align:center">
+  <body style="background-color: white; text-align:center; font-family: 'Spectral', serif;">
 
-      <nav class="nav justify-content-center bg-dark">
-          <a class="nav-link text-white" href="index.html">Index</a>
-          <a class="nav-link text-white" href="ganoTokens.html">Gano</a>
-          <a class="nav-link text-white" href="gastoTokens.html">Canjeables</a>
-          <a class="nav-link text-white" href="intercambio.html">Intercambio</a>
-
-          <a class="nav-link text-white right"> TOKENS </a>
+      <nav class="nav navbar-default bg-dark">
+          <div class="container-fluid" style="text-align:left">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">TEFTOK</a>
+            <a class="text-white">   Blockchain Competence Center</a>
+            </div>
+            <ul class="nav justify-content-center" style="font-family:'Bevan', cursive;">
+                <li> <a class="nav-link text-white text-left" href="index.html">Index</a></a></li>
+                <li> <a class="nav-link text-white" href="ganoTokens.html">Gano</a></li>
+                <li> <a class="nav-link text-white" href="gastoTokens.html">Canjeables</a></li>
+                <li> <a class="nav-link text-white text-right" href="intercambio.html">Intercambio</a> </li>
+                <li style="position:absolute; right:20px; top:20px; background-color:white; border-radius:5%;"><a class="nav-link" style="font-family:'Francois One', sans-serif; font-size:120%;" id="balanceTEFTOK">  </a> </li>
+            </ul>
+          </div>
       </nav>
+
 
 
 
@@ -57,6 +66,10 @@
 
 		  <!-- Se ponen aqui los js y asi reduce el tiempo de carga del HTML -->
   		<script>
+
+        var balanceTEFTOK = document.getElementById("balanceTEFTOK");
+        balanceTEFTOK.innerHTML = sessionStorage.getItem("Balance")/1000+" TEFTOK";
+
 
   		</script>
   		<!-- Incluir jquery y bootstrap -->
