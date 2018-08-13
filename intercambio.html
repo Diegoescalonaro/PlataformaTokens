@@ -6,27 +6,22 @@
   		<meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  		<!-- Importar nuestro ABI en el proyecto -->
+      <script src="./node_modules/@waves/waves-api/dist/waves-api.min.js"></script>
+      <script src="./js/app.js"></script>
 
-      <script src="./../Plataforma Tokens/App/node_modules/@waves/waves-api/dist/waves-api.min.js"></script>
+      <!--  / Style / -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="./css/main.css"> 
       <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Bevan|Spectral|Francois+One|Righteou" rel="stylesheet">  
+      <link href="https://fonts.googleapis.com/css?family=Bevan|Spectral|Francois+One|Righteou" rel="stylesheet">
 
       <script src="./dist/waves-signature-generator.js"></script>
-
-      <script>
-        const Waves = WavesAPI.create(WavesAPI.MAINNET_CONFIG);
-        
-        console.log(Waves);
-
-      </script>
 
   		<title> Plataforma Tokens </title>
 
 	</head>
 
-  <body style="background-color: white; text-align:center; font-family: 'Spectral', serif;">
+  <body>
 
       <nav class="nav navbar-default bg-dark">
           <div class="container-fluid" style="text-align:left">
@@ -45,9 +40,6 @@
       </nav>
 
 
-
-
-
         <!--  - - - - - - - - CONTAINER TODOS CANJEABLES - - - - - - - - - - - - - -   -->
         <div class="container-fluid">
 
@@ -57,6 +49,63 @@
           <h2>  Social  </h2>
           <hr>
         </div>
+
+        <!-- - - - - - - - -  Usuarios aleatorios - - - - - - -- - -  -->
+        <div class="row mx-auto pl-5 pr-5 justify-content-center" >
+          <div class="col-lg-2">
+              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120">
+              <h3>Diego Escalona</h3>
+              <p>Blockchain Competence Center </p>
+              <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
+              </div>
+
+            <div class="col-lg-2">
+              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120">
+              <h3>J M Álvarez-Pallete</h3>
+              <p> CEO </p>
+              <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
+            </div>
+
+
+            <div class="col-lg-2">
+              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120">
+              <h3>Jorge Ordovás</h3>
+              <p>Blockchain Competence Center </p>
+              <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
+            </div>
+
+
+            <div class="col-lg-2">
+              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120">
+              <h3>Will Smith</h3>
+              <p> Telefónica Open Future </p>
+              <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
+            </div>
+
+          </div>
+          <!-- - - - - - - - FIN  Usuarios aleatorios - - - - - -  - -  -->
+
+          <hr>
+
+          <p>Enviar <input id="cantidad" style="width:60px; text-align:center;"> TEFTOK a la direccion:</p>
+          
+          <input id="destino" style="width:350px; text-align:center;"> </input><br><br>
+          <button class="btn btn-secondary" onclick="envio()"> Enviar  </button>
+
+
+
+        <div class="bg-secondary rounded text-white">
+          <hr>
+          <h2>  Intercambio  </h2>
+          
+          <div class="jumbotron">
+            <h1> <strong> . . . </strong></h1>
+          </div>
+
+      </div>
+
+
+
 
 
 

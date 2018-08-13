@@ -6,27 +6,22 @@
   		<meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  		<!-- Importar nuestro ABI en el proyecto -->
+      <script src="./node_modules/@waves/waves-api/dist/waves-api.min.js"></script>
+      <script src="./js/app.js"></script>
 
-      <script src="./../Plataforma Tokens/App/node_modules/@waves/waves-api/dist/waves-api.min.js"></script>
+      <!--  / Style / -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="./css/main.css"> 
       <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Bevan|Spectral|Francois+One|Righteou" rel="stylesheet">  
+      <link href="https://fonts.googleapis.com/css?family=Bevan|Spectral|Francois+One|Righteou" rel="stylesheet"> 
 
       <script src="./dist/waves-signature-generator.js"></script>
-
-      <script>
-        const Waves = WavesAPI.create(WavesAPI.MAINNET_CONFIG);
-        
-        console.log(Waves);
-
-      </script>
 
   		<title> Plataforma Tokens </title>
 
 	</head>
 
-  <body style="background-color: white; text-align:center; font-family: 'Spectral', serif;">      
+  <body>      
 
 
       <nav class="nav navbar-default bg-dark">
@@ -61,9 +56,9 @@
 
 
 
-        <!-- EXPERIENCIA 1  --->
+        <!-- EXPERIENCIA 1  -->
         <div class="row feature">
-          <div class="col-md-4">
+          <div class="col-md-4" style="display:flex; align-items:center;">
             <img class="featurette-image img-fluid mx-auto"  src="./images/silverstone.jpg" alt="Image">
           </div>
           <div class="col-md-8">
@@ -83,9 +78,9 @@
         </div>
 
 
-        <!-- EXPERIENCIA 2  --->
+        <!-- EXPERIENCIA 2  -->
         <div class="row feature border-top">
-          <div class="col-md-4">
+          <div class="col-md-4" style="display:flex; align-items:center;">
             <img class="featurette-image img-fluid mx-auto" src="./images/teatro.jpg" alt="Image">
           </div>
           <div class="col-md-8">
@@ -113,9 +108,9 @@
         </div>
 
 
-        <!--  PRODUCTO 1 --->
+        <!--  PRODUCTO 1 -->
         <div class="row feature border-bottom">
-          <div class="col-md-4">
+          <div class="col-md-4" style="display:flex; align-items:center;">
             <img class="featurette-image img-fluid mx-auto" src="./images/maillot.jpg" alt="Image">
           </div>
           <div class="col-md-8">
@@ -133,9 +128,9 @@
           </div>
         </div>
 
-        <!--  PRODUCTO 2 --->
+        <!--  PRODUCTO 2 -->
         <div class="row feature">
-          <div class="col-md-4">
+          <div class="col-md-4" style="display:flex; align-items:center;">
             <img class="featurette-image img-fluid mx-auto" src="./images/bici.jpg" alt="Image">
           </div>
           <div class="col-md-8">

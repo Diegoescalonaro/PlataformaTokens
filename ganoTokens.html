@@ -6,28 +6,23 @@
   		<meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  		<!-- Importar nuestro ABI en el proyecto -->
+      <script src="./node_modules/@waves/waves-api/dist/waves-api.min.js"></script>
+      <script src="./js/app.js"></script>
 
-      <script src="./../Plataforma Tokens/App/node_modules/@waves/waves-api/dist/waves-api.min.js"></script>
+      <!--  / Style / -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="./css/main.css"> 
       <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bevan|Spectral|Francois+One|Righteou" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Bevan|Spectral|Francois+One|Righteou" rel="stylesheet">
       
 
       <script src="./dist/waves-signature-generator.js"></script>
-
-      <script>
-        const Waves = WavesAPI.create(WavesAPI.MAINNET_CONFIG);
-        
-        console.log(Waves);
-
-      </script>
 
   		<title> Plataforma Tokens </title>
 
 	</head>
 
-  <body style="background-color: white; text-align:center; font-family: 'Spectral', serif;">
+  <body>
 
       
       
@@ -60,9 +55,9 @@
         </div>
 
 
-        <!-- PARTICIPA 1  --->
+        <!-- PARTICIPA 1  -->
         <div class="row feature">
-          <div class="col-md-3 ">
+          <div class="col-md-3 align-items-center">
             <img class="featurette-image img-fluid mx-auto" width="360" height="160" src="./images/ethereum.jpg" alt="Image">
           </div>
           <div class="col-md-7">
@@ -73,15 +68,17 @@
             </p>
 
             </div>
-            <div class="col-md-2 row align-items-center"><a class="btn btn-secondary bg-success align-center" href="#" role="button"> 100 TEFTOK </a></div>
+            <!-- justify-content: margen horizontal
+                 align-items: margen vertical -->
+            <div class="col-md-2 row align-items-center justify-content-center"><a class="btn btn-secondary bg-success"  href="#" role="button"> 100 TEFTOK </a></div>
           
         </div>
         
 
-        <!-- PARTICIPA 2  --->
+        <!-- PARTICIPA 2  -->
         <div class="row feature border">
           <div class="col-md-3">
-            <img class="featurette-image img-fluid mx-auto" width="360" height="160" src="./images/alastria.jpeg" alt="Image">
+            <img class="featurette-image img-fluid mx-auto pl-3 pt-2" width="360" height="160" src="./images/alastria.jpeg" alt="Image">
           </div>
           <div class="col-md-7">
             <h2 class="featurette-heading"> Alastria </h2>
@@ -91,11 +88,11 @@
             </p>
 
             </div>
-            <div class="col-md-2 row align-items-center"><a class="btn btn-secondary bg-success align-center" href="#" role="button"> 200 TEFTOK </a></div>
+            <div class="col-md-2 row align-items-center justify-content-center"><a class="btn btn-secondary bg-success" href="#" role="button"> 200 TEFTOK </a></div>
           
         </div>
 
-        <!-- PARTICIPA 3  --->
+        <!-- PARTICIPA 3  -->
         <div class="row feature border-top">
           <div class="col-md-3">
             <img class="featurette-image img-fluid mx-auto" width="310" height="160" src="./images/framer2.png" alt="Image">
@@ -108,7 +105,7 @@
             </p>
 
             </div>
-            <div class="col-md-2 row align-items-center"><a class="btn btn-secondary bg-success align-center" href="#" role="button"> 100 TEFTOK </a></div>
+            <div class="col-md-2 row align-items-center justify-content-center"><a class="btn btn-secondary bg-success" href="#" role="button"> 100 TEFTOK </a></div>
           
         </div>
 
@@ -121,7 +118,7 @@
         </div>
 
 
-        <!--  PROMUEVE 1 --->
+        <!--  PROMUEVE 1 -->
         <div class="row feature">
           <div class="col-md-3">
             <img class="featurette-image img-fluid mx-auto" width="200" height="200" src="./images/twitter.png" alt="Image">
@@ -135,11 +132,11 @@
 
             </p>
             </div>
-            <div class="col-md-2 row align-items-center"><a class="btn btn-secondary bg-success align-center" href="#" role="button"> 400 TEFTOK </a></div>
+            <div class="col-md-2 row align-items-center justify-content-center"><a class="btn btn-secondary bg-success " href="#" role="button"> 400 TEFTOK </a></div>
           
         </div>
 
-        <!--  PROMUEVE 2 --->
+        <!--  PROMUEVE 2 -->
         <div class="row feature border-top">
           <div class="col-md-3">
             <img class="featurette-image img-fluid mx-auto" width="200" height="200" src="./images/linkedin.png" alt="Image">
@@ -152,7 +149,7 @@
             </p>
 
             </div>
-            <div class="col-md-2 row align-items-center"><a class="btn btn-secondary bg-success align-center" href="#" role="button"> 100 TEFTOK </a></div>
+            <div class="col-md-2 row align-items-center justify-content-center"><a class="btn btn-secondary bg-success" href="#" role="button"> 100 TEFTOK </a></div>
         </div>
 
 
