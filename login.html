@@ -28,7 +28,7 @@
       <nav class="nav navbar-default bg-dark">
           <div class="container-fluid" style="text-align:left">
           <div class="navbar-header">
-              <a class="navbar-brand" href="index.html">TEFTOK</a>
+              <a class="navbar-brand" href="login.html">TEFTOK</a>
             <a class="text-white">   Blockchain Competence Center</a>
             </div>
             <ul class="nav justify-content-center" style="font-family:'Bevan', cursive;">
@@ -43,6 +43,61 @@
       <!-- - FIN BARRA HORIZONTAL NAVEGADOR - -->
 
 
+    <!--  - - - - - - - - CONTAINER PRINCIPAL - - - - - - - - - - - - - -   -->
+    <div class="container-fluid">
+
+    	<div class="jumbotron">
+     		<h1 style="font-style: oblique;"> <strong>PLATAFORMA DE TOKENS </strong></h1>
+     		<p> Gana, canjea e intercambia Telefónica Tokens interactuando con las distintas secciones de la plataforma web. </p>
+    	</div>
+      
+    	<div class="bg-secundary ">
+          	<hr>
+          	<h1> - Login -  </h1>
+          	<br>
+      	</div>
+
+      <!-- Formulario de Seed para login -->
+      <p>Introduce tu Seed:</p> 
+      <input id="seed" style="width:600px;"> </input>
+      <button class="btn btn-secondary" onclick="login()"> Acceder </button>
+
+      <hr>
+      
+      <!-- - - - - - - - - - - MODAL OCULTO - - - - - - - - - - - - - - - -->
+      <div id="modaloculto" class="invisible">
+
+      	<!-- Informacion vinculada a la cuenta segun el Seed introducido en login -->
+      	<h3>  </h3>
+      	<div>
+        	<p id="info"> </p>
+        	<p id="transacciones"> </p>
+        </div>
+          
+
+        <form>
+            <input class="btn btn-secondary" type="button" value="ir" onclick="window.location.href='./index.html'" />
+        </form>
+        
+      	<br><br>
+
+	</div>
+    <!-- - - - - - - - - - - FIN MODAL OCULTO - - - - - - - - - - - - - - - -->
+
+    </div class="container-fluid">
+	<!--  - - - - - - - - FIN CONTAINER PRINCIPAL - - - - - - - - - - - - - -   -->
+
+
+    <div class="bg-light rounded border"> 
+    		<p> . . . </p>
+          <h1>  Footer   </h1>
+    </div>
+
+
+		  <!-- Se ponen aqui los js y asi reduce el tiempo de carga del HTML -->
+  		<script></script>
+  		<!-- Incluir jquery y bootstrap -->
+  		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   
 	</body>
 </html>
