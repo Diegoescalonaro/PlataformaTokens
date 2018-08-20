@@ -17,7 +17,14 @@
 
       <script src="./dist/waves-signature-generator.js"></script>
 
-  		<title> Plataforma Tokens </title>
+      <title> Plataforma Tokens </title>
+      
+      <style>
+
+
+        
+        
+        </style>
 
 	</head>
 
@@ -26,14 +33,14 @@
       <nav class="nav navbar-default bg-dark">
           <div class="container-fluid" style="text-align:left">
           <div class="navbar-header">
-              <a class="navbar-brand" href="index.html">TEFTOK</a>
+              <a class="navbar-brand" href="login.html">TEFTOK</a>
             <a class="text-white">   Blockchain Competence Center</a>
             </div>
             <ul class="nav justify-content-center" style="font-family:'Bevan', cursive;">
                 <li> <a class="nav-link text-white text-left" href="index.html">Index</a></a></li>
                 <li> <a class="nav-link text-white" href="ganoTokens.html">Gano</a></li>
                 <li> <a class="nav-link text-white" href="gastoTokens.html">Canjeables</a></li>
-                <li> <a class="nav-link text-white text-right" href="intercambio.html">Intercambio</a> </li>
+                <li> <a class="nav-link text-info text-right" href="intercambio.html">Intercambio</a> </li>
                 <li style="position:absolute; right:20px; top:20px; background-color:white; border-radius:5%;"><a class="nav-link" style="font-family:'Francois One', sans-serif; font-size:120%;" id="balanceTEFTOK">  </a> </li>
             </ul>
           </div>
@@ -46,71 +53,127 @@
         <!--  - - - - - - - - INTERCAMBIO - SOCIAL - - - - - - - - - - - - - -   --> 
         <div class="bg-secondary rounded text-white">
           <hr>
-          <h2>  Social  </h2>
+          <h2>  Envia Tokens  </h2>
           <hr>
         </div>
 
-        <!-- - - - - - - - -  Usuarios aleatorios - - - - - - -- - -  -->
-        <div class="row mx-auto pl-5 pr-5 justify-content-center" >
-          <div class="col-lg-2">
-              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120">
-              <h3>Diego Escalona</h3>
-              <p>Blockchain Competence Center </p>
-              <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
-              </div>
 
-            <div class="col-lg-2">
-              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120">
-              <h3>J M Álvarez-Pallete</h3>
-              <p> CEO </p>
-              <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
-            </div>
+        <h5 class="mx-5 text-dark">Elige aquellos compañeros a quien quieras enviar tokens y 
+          la cantidad que quieres enviar a cada uno. ¡Puedes ser tan generoso como tu saldo en TEFTOK!</h5>
 
-
-            <div class="col-lg-2">
-              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120">
-              <h3>Jorge Ordovás</h3>
-              <p>Blockchain Competence Center </p>
-              <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
-            </div>
-
-
-            <div class="col-lg-2">
-              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120">
-              <h3>Will Smith</h3>
-              <p> Telefónica Open Future </p>
-              <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
-            </div>
-
+          <div class="search">
+              <form action="#">
+                <input class="rounded" style="width:45%" type="text" placeholder="Search.." name="search">
+                <svg class="" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="40px" height="40px" viewBox="0 0 485.213 485.213" style="enable-background:new 0 0 485.213 485.213;"
+                xml:space="preserve">
+             <g>
+               <g>
+                 <path d="M471.882,407.567L360.567,296.243c-16.586,25.795-38.536,47.734-64.331,64.321l111.324,111.324
+                   c17.772,17.768,46.587,17.768,64.321,0C489.654,454.149,489.654,425.334,471.882,407.567z"/>
+                 <path d="M363.909,181.955C363.909,81.473,282.44,0,181.956,0C81.474,0,0.001,81.473,0.001,181.955s81.473,181.951,181.955,181.951
+                   C282.44,363.906,363.909,282.437,363.909,181.955z M181.956,318.416c-75.252,0-136.465-61.208-136.465-136.46
+                   c0-75.252,61.213-136.465,136.465-136.465c75.25,0,136.468,61.213,136.468,136.465
+                   C318.424,257.208,257.206,318.416,181.956,318.416z"/>
+                 <path d="M75.817,181.955h30.322c0-41.803,34.014-75.814,75.816-75.814V75.816C123.438,75.816,75.817,123.437,75.817,181.955z"/>
+               </g>
+             </g>
+                </svg>
+              </form>
           </div>
-          <!-- - - - - - - - FIN  Usuarios aleatorios - - - - - -  - -  -->
 
+          <br>
+            <div>
+              <p class="btn btn-info" onclick="mostrar('Jose Luis')"> Jose Luis</p>
+              <p class="btn btn-info" onclick="mostrar('Sergio')"> Sergio</p>
+              <p class="btn btn-info" onclick="mostrar('Jorge')"> Jorge</p>
+              <p class="btn btn-info" onclick="mostrar('Alfonso')"> Alfonso</p>
+              <p class="btn btn-info" onclick="mostrar('Diego')"> Diego</p>
+
+            </div>
+
+            <hr style="width:180px;">
+            <br>
+            <h3 class="text-dark">Enviar <input class="text-info" id="cantidad" style="width:60px; text-align:center;"> TEFTOK a la dirección:</p>
+              
+            <input class="text-info" id="destino" style="width:350px; text-align:center;"/><br><br>
+            <button class="btn btn-secondary" onclick="envio()"> Enviar  </button>  
+                
+            
           <hr>
-
-          <p>Enviar <input id="cantidad" style="width:60px; text-align:center;"> TEFTOK a la direccion:</p>
-          
-          <input id="destino" style="width:350px; text-align:center;"> </input><br><br>
-          <button class="btn btn-secondary" onclick="envio()"> Enviar  </button>
-
-
 
         <div class="bg-secondary rounded text-white">
           <hr>
-          <h2>  Intercambio  </h2>
+          <h2>  Social  </h2>
           
           <div class="jumbotron">
-            <h1> <strong> . . . </strong></h1>
+            <h5 class="text-dark">
+                Usa tus tokens para acceder a experiencias que ofrecen tus compañeros (formación, mentoring...) o apórtales tu experiencia, a cambio de tokens.  
+            </h5>
+            <p> ...</p>
+            <div>
+                <p class="btn btn-info" style="width:200px;" onclick="mostrar2('Anuncios')"> Anuncios</p>
+                <p class="btn btn-info" style="width:200px;" onclick="mostrar2('Formación')"> Formación</p>
+                <p class="btn btn-info" style="width:200px;" onclick="mostrar2('Mentoring')"> Mentoring</p>
+                <p class="btn btn-info" style="width:200px;" onclick="mostrar2('Crowdfunding')"> Crowdfunding</p>
+                <p class="btn btn-info" style="width:200px;" onclick="mostrar2('Otros')"> Otros</p>
+  
+              </div>
+
+              <h5 id="social" class="text-info"> </h5>
           </div>
 
-      </div>
-
-
-
-
-
+          
 
       </div>
-      <!--     FIN CONTAINER CANJEABLES    -->
+
+            <!-- - - - - - - - -  Usuarios aleatorios - - - - - -  - -  -->
+            
+                <!-- - - - - - - - FIN  Usuarios aleatorios - - - - - -  - -  -->
+      </div>
+
+      <br>
+      <div class="row mx-auto pl-5 pr-5 justify-content-center" >
+                <div class="col-lg-2">
+                    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120"/>
+                    <h3>Diego Escalona</h3>
+                    <p>Blockchain Competence Center </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
+                    </div>
+      
+                  <div class="col-lg-2">
+                    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120"/>
+                    <h3>J M Álvarez-Pallete</h3>
+                    <p> CEO </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
+                  </div>
+      
+      
+                  <div class="col-lg-2">
+                    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120"/>
+                    <h3>Jorge Ordovás</h3>
+                    <p>Blockchain Competence Center </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
+                  </div>
+      
+      
+                  <div class="col-lg-2">
+                    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="  width="120" height="120"/>
+                    <h3>Will Smith</h3>
+                    <p> Telefónica Open Future </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Más...</a></p>
+                  </div>
+      
+        </div>
+
+        <br>
+
+
+      <footer>
+          <div class="bg-dark rounded border pt-2"> 
+              <p class="text-white"> &copy; Blockchain Competence Center<p></p>
+          </div>
+        </footer>
 
 
 		  <!-- Se ponen aqui los js y asi reduce el tiempo de carga del HTML -->
@@ -118,6 +181,19 @@
 
         var balanceTEFTOK = document.getElementById("balanceTEFTOK");
         balanceTEFTOK.innerHTML = sessionStorage.getItem("Balance")/1000+" TEFTOK";
+
+        function mostrar(name){
+          var destino = document.getElementById("destino");
+          destino.value=name;
+        }
+
+        function mostrar2(type){
+
+          var social = document.getElementById("social");
+          social.innerHTML ="<hr>  - "+type+" - <hr>";
+          
+        }
+      
 
 
   		</script>
