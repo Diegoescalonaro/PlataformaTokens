@@ -59,8 +59,8 @@
 
       <!-- Formulario de Seed para login -->
       <p>Introduce tu Seed:</p> 
-      <input id="seed" style="width:600px;"> </input>
-      <button class="btn btn-secondary" onclick="login()"> Acceder </button>
+      <input id="seed" style="width:600px;"/>
+      <button class="btn btn-secondary ml-2" onclick="login()"> Acceder </button>
 
       <hr>
       
@@ -68,18 +68,16 @@
       <div id="modaloculto" class="invisible">
 
       	<!-- Informacion vinculada a la cuenta segun el Seed introducido en login -->
-      	<h3>  </h3>
-      	<div>
-        	<p id="info"> </p>
-        	<p id="transacciones"> </p>
-        </div>
           
-
-        <form>
-            <input class="btn btn-secondary" type="button" value="ir" onclick="window.location.href='./index.html'" />
+        <form >
+            <!--<img src="./images/arrow.png" style="width:150px" onclick="window.location.href='./index.html'" /> -->
+            <br>
+            <input class="btn btn-secondary" type="button" value="Continuar" onclick="window.location.href='./index.html'" />
+            <br>
+            
         </form>
         
-      	<br><br>
+      	<br>
 
 	</div>
     <!-- - - - - - - - - - - FIN MODAL OCULTO - - - - - - - - - - - - - - - -->
@@ -88,10 +86,11 @@
 	<!--  - - - - - - - - FIN CONTAINER PRINCIPAL - - - - - - - - - - - - - -   -->
 
 
-    <div class="bg-light rounded border"> 
-    		<p> . . . </p>
-          <h1>  Footer   </h1>
-    </div>
+    <footer class="footer">
+            <div class="bg-dark rounded border pt-2"> 
+                <p class="text-white"> &copy; Blockchain Competence Center<p></p>
+            </div>
+    </footer>
 
 
 		  <!-- Se ponen aqui los js y asi reduce el tiempo de carga del HTML -->
